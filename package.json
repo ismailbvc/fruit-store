@@ -1,0 +1,24 @@
+{
+  "name": "fruit-store-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "maybe-install": "test -d node_modules || npm install",
+    "start-dev": "npm run maybe-install; ./node_modules/.bin/nodemon -q server.js -e js,json -i 'www/*' -i 'node_modules/*'",
+    "start": "npm run maybe-install; node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ismailbvc/fruit-store"
+  },
+  "author": "elhardoum",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mssql": "^6.3.1",
+    "nodemon": "^2.0.7"
+  }
+}
